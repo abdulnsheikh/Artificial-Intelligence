@@ -37,8 +37,7 @@ class SearchAgent(Agent):
                 heur = getattr(search, heuristic)
             else:
                 raise AttributeError(heuristic + ' is not a function in searchAgents.py or search.py.')
-            print('[SearchAgent] using function %s and heuristic %s' % (fn, heuristic))
-            # Note: this bit of Python trickery combines the search algorithm and the heuristic
+            print('[SearchAgent] using function %s and heuristic %s' % (fn, heuristic)) 
             self.searchFunction = lambda x: func(x, heuristic=heur)
 
         # Get the search problem type from the name
